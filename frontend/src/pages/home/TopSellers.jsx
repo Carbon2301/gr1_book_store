@@ -1,14 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import { BookCard } from '../books/BookCard';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-// import required modules
 import { Pagination, Navigation } from 'swiper/modules';
 const categories = ["Choose a genre", "Business", "Fiction", "Horror", "Adventure"];
 

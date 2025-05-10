@@ -38,3 +38,13 @@
 .html{
    scroll-behavior: smooth;
 }
+
+.mySwiper:hover .swiper-button-prev:not(.swiper-button-disabled) {
+    display: flex !important;
+}
+.mySwiper:hover .swiper-button-next {
+    display: flex !important;
+}
+.swiper-button-prev.swiper-button-disabled {
+    display: none !important;
+}
