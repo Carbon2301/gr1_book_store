@@ -20,4 +20,4 @@
 }
 
 /* Import animate.css for animations */
-@import 'animate.css';
+@use 'animate.css';

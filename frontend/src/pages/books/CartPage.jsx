@@ -65,7 +65,7 @@ const CartPage = () => {
                             <p className="text-gray-500"><strong>Qty:</strong> 1</p>
       
                             <div className="flex">
-                              <button onClick={() => handleRemoveFromCart(product._id)}
+                              <button onClick={() => handleRemoveFromCart(product)}
                                type="button" className="font-medium text-indigo-600 hover:text-indigo-500">
                                 Remove
                               </button>

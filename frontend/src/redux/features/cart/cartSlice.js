@@ -55,6 +55,25 @@ const cartSlice = createSlice({
         },
         removeFromCart: (state, action) => {
             state.cartItems = state.cartItems.filter(item => item._id !== action.payload._id);
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Product removed from cart",
+                text: "Your item has been removed successfully!",
+                showConfirmButton: false,
+                timer: 1500,
+                timerProgressBar: true,
+                toast: true,
+                customClass: {
+                    popup: 'colored-toast'
+                },
+                showClass: {
+                    popup: 'animate__animated animate__fadeInRight'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutRight'
+                }
+            });
         },
         clearCart: (state) => {
             state.cartItems = [];
