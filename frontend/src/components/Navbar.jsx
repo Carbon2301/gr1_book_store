@@ -7,6 +7,7 @@ import { FaHeart } from "react-icons/fa6";
 import { GiShoppingBag } from "react-icons/gi";
 import { useSelector } from 'react-redux';
 import avatarImg from '../assets/avatar.png'
+import { useAuth } from '../context/AuthContext';
 
 const navigation = [
     {
@@ -30,8 +31,11 @@ const navigation = [
 export const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const cartItems = useSelector(state => state.cart.cartItems);
-    const currentUser = false;  
-
+    
+    const {currentUser, logoutUser} = useAuth();
+    const handleLogout = async () => {
+        logoutUser();
+        }
     return (
         <header className="max-w-screen-2xl mx-auto px-4 py-6">
             <nav className="flex justify-between items-center">
@@ -71,6 +75,11 @@ export const Navbar = () => {
                                                     </Link>
                                                 </li>
                                             ))}
+                                            <li>
+                                                <button 
+                                                onClick={handleLogout}
+                                                className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={handleLogout}>Logout</button>
+                                            </li>
                                         </ul>
                                     </div>
                                 )}
