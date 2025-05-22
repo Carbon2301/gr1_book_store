@@ -3,12 +3,25 @@ import { useForm } from 'react-hook-form'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { useAuth } from '../../context/AuthContext'
+import { useCreateOrderMutation } from '../../redux/features/orders/ordersApi';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const CheckoutPage = () => {
     const cartItems = useSelector(state => state.cart.cartItems);
     const totalPrice = cartItems.reduce((acc, item) => acc + item.newPrice, 0).toFixed(2);
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => {
+    const {currentUser} = useAuth();
+    const { register, 
+            handleSubmit, 
+            watch, 
+            formState: { errors } } = useForm();
+
+    const [createOrder, {isLoading, error}] = useCreateOrderMutation();
+    const navigate = useNavigate();
+
+    const [isChecked, setIsChecked] = useState(false);
+    const onSubmit = async (data) => {
         const newOrder = {
             name: data.name,
             email: currentUser?.email,
@@ -22,10 +35,31 @@ const CheckoutPage = () => {
             productIds: cartItems.map(item => item?._id),
             totalPrice: totalPrice,
         }
-        console.log(newOrder);
+        
+        try {
+            await createOrder(newOrder).unwrap();
+            Swal.fire({
+                title: "Confirm Order",
+                text: "Your order has been created successfully",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, It's Ok!"
+              });
+              navigate('/orders');
+        } catch (error) {
+            console.log("error in creating order", error);
+            alert("error in creating order");
+        }
     }
-    const currentUser = true; //TODO: get user from auth
-    const [isChecked, setIsChecked] = useState(false);
+
+    if(isLoading) {
+        return <div>Loading...</div>
+    }
+    if(error) {
+        return <div>Error: {error.message}</div>
+    }
     return (
         <section>
             <div className="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
