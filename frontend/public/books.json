@@ -1,5 +1,5 @@
 [
-  {
+  { "_id": 1,
     "title": "Tư duy nhanh và chậm",
     "description": "Khám phá hai hệ thống tư duy: hệ thống nhanh, trực giác và hệ thống chậm, lý trí. Cuốn sách giúp hiểu rõ hơn về cách con người đưa ra quyết định và những sai lầm thường gặp.",
     "category": "business",
@@ -8,7 +8,7 @@
     "oldPrice": 29.99,
     "newPrice": 19.99
   },
-  {
+  { "_id": 2,
     "title": "Cha giàu, cha nghèo",
     "description": "Phân tích sự khác biệt trong tư duy tài chính giữa “cha giàu” và “cha nghèo”, nhấn mạnh tầm quan trọng của giáo dục tài chính và đầu tư sớm.",
     "category": "business",
@@ -17,7 +17,7 @@
     "oldPrice": 24.99,
     "newPrice": 14.99
   },
-  {
+  { "_id": 3,
     "title": "Đừng bao giờ đi ăn một mình",
     "description": "Kỹ năng xây dựng mối quan hệ và networking hiệu quả để thành công trong kinh doanh và cuộc sống.",
     "category": "marketing",
@@ -26,7 +26,7 @@
     "oldPrice": 39.99,
     "newPrice": 29.99
   },
-  {
+  { "_id": 4,
     "title": "Nhà giả kim",
     "description": "Một cuộc hành trình kỳ diệu của chàng chăn cừu Santiago đi tìm kho báu, biểu tượng cho hành trình tìm kiếm ước mơ và định mệnh.",
     "category": "fiction",
@@ -35,7 +35,7 @@
     "oldPrice": 49.99,
     "newPrice": 39.99
   },
-  {
+  { "_id": 5,
     "title": "Mắt biếc",
     "description": "Câu chuyện tình đơn phương cảm động, lãng mạn và buồn bã của Ngạn dành cho Hà Lan, gắn liền với ký ức tuổi thơ.",
     "category": "fiction",
@@ -44,7 +44,7 @@
     "oldPrice": 19.99,
     "newPrice": 9.99
   },
-  {
+  { "_id": 6,
     "title": "Dracula",
     "description": "Kể về Bá tước Dracula – ma cà rồng nổi tiếng nhất thế giới, đại diện cho nỗi sợ hãi của nhân loại trước cái chết và dục vọng.",
     "category": "horror",
@@ -53,7 +53,7 @@
     "oldPrice": 44.99,
     "newPrice": 34.99
   },
-  {
+  { "_id": 7,
     "title": "IT – Gã Hề Ma Quái",
     "description": "Một nhóm trẻ em phải đối mặt với ác quỷ dưới hình dạng gã hề tên Pennywise, gieo rắc nỗi kinh hoàng mỗi 27 năm.",
     "category": "horror",
@@ -62,7 +62,7 @@
     "oldPrice": 59.99,
     "newPrice": 49.99
   },
-  {
+  { "_id": 8,
     "title": "Không gia đình",
     "description": "Câu chuyện về cậu bé Remi bị bán cho một gánh xiếc, trải qua bao thăng trầm trước khi tìm lại được gia đình thật sự của mình.",
     "category": "adventure",
@@ -71,7 +71,7 @@
     "oldPrice": 21.99,
     "newPrice": 16.99
   },
-  {
+  { "_id": 9,
     "title": "Harry Potter và Hòn đá Phù thủy",
     "description": "Mở đầu cuộc hành trình kỳ ảo của cậu bé phù thủy Harry trong thế giới phép thuật, đấu tranh chống lại chúa tể Hắc ám Voldemort.",
     "category": "adventure",
@@ -80,7 +80,7 @@
     "oldPrice": 27.99,
     "newPrice": 18.99
   },
-  {
+  { "_id": 10,
     "title": "Khởi nghiệp tinh gọn",
     "description": "Giới thiệu phương pháp Lean Startup nhằm tối ưu hóa nguồn lực và tăng khả năng sống sót cho các doanh nghiệp khởi nghiệp.",
     "category": "business",
@@ -89,7 +89,7 @@
     "oldPrice": 14.99,
     "newPrice": 10.99
   },
-  {
+  { "_id": 11,
     "title": "Thói quen thứ 8",
     "description": "Tiếp nối \"7 thói quen\", cuốn sách giúp bạn khám phá ra \"tiếng nói\" của mình và truyền cảm hứng cho người khác phát triển.",
     "category": "business",
@@ -98,7 +98,7 @@
     "oldPrice": 32.99,
     "newPrice": 25.99
   },
-  {
+  { "_id": 12,
     "title": "Ông trăm tuổi trèo qua cửa sổ và biến mất",
     "description": "Một câu chuyện hài hước, phi lý về cuộc phiêu lưu của ông già trốn khỏi viện dưỡng lão, đan xen nhiều sự kiện lịch sử thế giới.",
     "category": "fiction",
@@ -107,7 +107,7 @@
     "oldPrice": 19.99,
     "newPrice": 9.99
   },
-  {
+  { "_id": 13,
     "title": "Kafka bên bờ biển",
     "description": "Một tác phẩm siêu thực, giàu biểu tượng, xoay quanh cậu bé Kafka trên hành trình chạy trốn khỏi lời nguyền và tìm kiếm bản ngã.",
     "category": "fiction",
@@ -116,7 +116,7 @@
     "oldPrice": 26.99,
     "newPrice": 21.99
   },
-  {
+  { "_id": 14,
     "title": "Tuổi thơ dữ dội",
     "description": "Một tiểu thuyết cảm động về thiếu niên Việt Nam tham gia kháng chiến chống Pháp, giàu tình yêu nước và lòng dũng cảm.",
     "category": "fiction",
@@ -125,7 +125,7 @@
     "oldPrice": 34.99,
     "newPrice": 24.99
   },
-  {
+  { "_id": 15,
     "title": "Ngôi nhà ma ám",
     "description": "Một tác phẩm kinh dị cổ điển với bầu không khí rùng rợn, khi một nhóm người đến sống và bị ám ảnh bởi ngôi nhà Hill House.",
     "category": "horror",
@@ -134,7 +134,7 @@
     "oldPrice": 22.99,
     "newPrice": 12.99
   },
-  {
+  { "_id": 16,
     "title": "Phòng số 1408",
     "description": "Một tiểu thuyết ngắn kể về một phòng khách sạn bị ma ám mà không ai sống sót được quá một giờ đồng hồ bên trong.",
     "category": "horror",
@@ -143,7 +143,7 @@
     "oldPrice": 24.99,
     "newPrice": 19.99
   },
-  {
+  { "_id": 17,
     "title": "Cô gái nhà bên",
     "description": "Dựa trên câu chuyện có thật, phản ánh sự tàn nhẫn, bạo hành tâm lý và thể xác đầy ám ảnh.",
     "category": "adventure",
@@ -152,7 +152,7 @@
     "oldPrice": 49.99,
     "newPrice": 39.99
   },
-  {
+  { "_id": 18,
     "title": "Cuộc phiêu lưu của Tom Sawyer",
     "description": "Tái hiện thế giới tuổi thơ với những trò nghịch ngợm, phiêu lưu mạo hiểm đầy hài hước và bài học nhân văn.",
     "category": "adventure",
@@ -161,7 +161,7 @@
     "oldPrice": 18.99,
     "newPrice": 12.99
   },
-  {
+  { "_id": 19,
     "title": "Robinson Crusoe",
     "description": "Robinson Crusoe là tác phẩm văn học cổ điển, được viết bởi nhà văn Daniel Defoe, nổi bật với câu chuyện về một người duy nhất sống trên đảo và tự tạo ra một cuộc sống mới cho mình.",
     "category": "adventure",
@@ -170,7 +170,7 @@
     "oldPrice": 35.99,
     "newPrice": 27.99
   },
-  {
+  { "_id": 20,
     "title": "Hai vạn dặm dưới đáy biển",
     "description": "Một cuộc phiêu lưu đầy hài hước và cảm động, kể về cuộc hành trình của hai anh em tàu thủy đi tìm bản ngã của mình trên đảo hoang và được cứu sống bởi người dân địa phương.",
     "category": "adventure",
