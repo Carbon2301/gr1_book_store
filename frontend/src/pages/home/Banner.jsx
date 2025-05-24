@@ -6,7 +6,12 @@ export const Banner = () => {
   return (
     <div className='flex flex-col md:flex-row-reverse py-16 justify-center items-center gap-12'>
         <div className='md:w-1/2 w-full flex items-center md:justify-end'>
-            <img src={bannerImg} alt="banner" />
+            <img
+                src={bannerImg}
+                alt="banner"
+                className="max-w-xs md:max-w-sm lg:max-w-md w-full h-auto object-contain"
+                style={{ maxHeight: '350px' }}
+            />
         </div>
 
         <div className='md:w-1/2 w-full'>

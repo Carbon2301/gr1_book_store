@@ -14,14 +14,17 @@ app.use(cors({
 }));
 
 // Routes
+// Import routes
 const bookRoutes = require('./src/books/book.route');
-app.use("/api/books", bookRoutes);
-
 const orderRoutes = require('./src/orders/order.route');
-app.use("/api/orders", orderRoutes);
-
 const userRoutes = require('./src/users/user.route');
+const adminRoutes = require('./src/stats/admin.stats');
+
+// API routes
+app.use("/api/books", bookRoutes);
+app.use("/api/orders", orderRoutes); 
 app.use("/api/auth", userRoutes);
+app.use("/api/admin", adminRoutes);
 
 
 async function main() {

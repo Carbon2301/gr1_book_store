@@ -1,203 +1,182 @@
 [
-    {
-      "_id": 1,
-      "title": "How to Grow Your Online Store",
-      "description": "Learn the best strategies to grow your online store in today's competitive market.",
-      "category": "business",
-      "trending": true,
-      "coverImage": "book-1.png",
-      "oldPrice": 29.99,
-      "newPrice": 19.99
-    },
-    {
-      "_id": 2,
-      "title": "Top 10 Fiction Books This Year",
-      "description": "A curated list of the best fiction books that are trending this year.",
-      "category": "books",
-      "trending": true,
-      "coverImage": "book-2.png",
-      "oldPrice": 24.99,
-      "newPrice": 14.99
-    },
-    {
-      "_id": 3,
-      "title": "Mastering SEO in 2024",
-      "description": "Tips and tricks to boost your SEO and rank higher on search engines.",
-      "category": "marketing",
-      "trending": true,
-      "coverImage": "book-3.png",
-      "oldPrice": 39.99,
-      "newPrice": 29.99
-    },
-    {
-      "_id": 4,
-      "title": "Best eCommerce Platforms",
-      "description": "A comprehensive guide on choosing the best eCommerce platforms for 2024.",
-      "category": "business",
-      "trending": false,
-      "coverImage": "book-4.png",
-      "oldPrice": 49.99,
-      "newPrice": 39.99
-    },
-    {
-      "_id": 5,
-      "title": "Non-Fiction Reads You Must Try",
-      "description": "Our top picks for non-fiction books to add to your reading list.",
-      "category": "books",
-      "trending": true,
-      "coverImage": "book-5.png",
-      "oldPrice": 19.99,
-      "newPrice": 9.99
-    },
-    {
-      "_id": 6,
-      "title": "Ultimate Guide to Digital Marketing",
-      "description": "A complete guide to digital marketing strategies for 2024.",
-      "category": "marketing",
-      "trending": false,
-      "coverImage": "book-6.png",
-      "oldPrice": 44.99,
-      "newPrice": 34.99
-    },
-    {
-      "_id": 7,
-      "title": "The First Days",
-      "description": "Katie is driving to work one beautiful day when a dead man jumps into her car and tries to eat her.  That same morning, Jenni opens a bedroom door to find her husband devouring their toddler son. ",
-      "category": "horror",
-      "trending": true,
-      "coverImage": "book-7.png",
-      "oldPrice": 59.99,
-      "newPrice": 49.99
-    },
-    {
-      "_id": 8,
-      "title": "The Hunger Games",
-      "description": "Could you survive on your own in the wild, with every one out to make sure you don't live to see the morning?",
-      "category": "fiction",
-      "trending": true,
-      "coverImage": "book-8.png",
-      "oldPrice": 21.99,
-      "newPrice": 16.99
-    },
-    {
-      "_id": 9,
-      "title": "Harry Potter and the Order of the Phoenix",
-      "description": "Harry Potter is about to start his fifth year at Hogwarts School of Witchcraft and Wizardry. Unlike most schoolboys, Harry never enjoys his summer holidays",
-      "category": "adventure",
-      "trending": false,
-      "coverImage": "book-9.png",
-      "oldPrice": 27.99,
-      "newPrice": 18.99
-    },
-    {
-      "_id": 10,
-      "title": "Pride and Prejudice",
-      "description": "The romantic clash between the opinionated Elizabeth and her proud beau, Mr. Darcy, is a splendid performance of civilized sparring.",
-      "category": "fiction",
-      "trending": true,
-      "coverImage": "book-10.png",
-      "oldPrice": 14.99,
-      "newPrice": 10.99
-    },
-    {
-      "_id": 11,
-      "title": "To Kill a Mockingbird",
-      "description": "The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it. 'To Kill A Mockingbird' became both an instant bestseller",
-      "category": "fiction",
-      "trending": true,
-      "coverImage": "book-11.png",
-      "oldPrice": 32.99,
-      "newPrice": 25.99
-    },
-    {
-      "_id": 12,
-      "title": "The Fault in Our Stars",
-      "description": "Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. ",
-      "category": "business",
-      "trending": true,
-      "coverImage": "book-12.png",
-      "oldPrice": 19.99,
-      "newPrice": 9.99
-    },
-    {
-      "_id": 13,
-      "title": "The Picture of Dorian Gray",
-      "description": "Oscar Wilde’s only novel is the dreamlike story of a young man who sells his soul for eternal youth and beauty.",
-      "category": "horror",
-      "trending": true,
-      "coverImage": "book-13.png",
-      "oldPrice": 26.99,
-      "newPrice": 21.99
-    },
-    {
-      "_id": 14,
-      "title": "The Giving Tree",
-      "description": "'Once there was a tree...and she loved a little boy.'So begins a story of unforgettable perception, beautifully written and illustrated by the gifted and versatile Shel Silverstein.",
-      "category": "fiction",
-      "trending": false,
-      "coverImage": "book-14.png",
-      "oldPrice": 34.99,
-      "newPrice": 24.99
-    },
-    {
-      "_id": 15,
-      "title": "Gone with the Wind",
-      "description": "Scarlett O'Hara, the beautiful, spoiled daughter of a well-to-do Georgia plantation owner, must use every means at her disposal to claw her way out of the poverty she finds herself in after Sherman's March to the Sea.",
-      "category": "fiction",
-      "trending": false,
-      "coverImage": "book-15.png",
-      "oldPrice": 22.99,
-      "newPrice": 12.99
-    },
-    {
-      "_id": 16,
-      "title": "The Lightning Thief",
-      "description": "Percy Jackson is a good kid, but he can't seem to focus on his schoolwork or control his temper. And lately, being away at boarding school is only getting worse - Percy could have sworn his pre-algebra teacher turned into a monster and tried to kill him",
-      "category": "fiction",
-      "trending": false,
-      "coverImage": "book-16.png",
-      "oldPrice": 24.99,
-      "newPrice": 19.99
-    },
-    {
-      "_id": 17,
-      "title": "Alice’s Adventures in Wonderland",
-      "description": "When Alice sees a white rabbit take a watch out of its waistcoat pocket she decides to follow it, and a sequence of most unusual events is set in motion. This mini book contains the entire topsy-turvy stories of Alice's Adventures in Wonderland",
-      "category": "adventure",
-      "trending": true,
-      "coverImage": "book-17.png",
-      "oldPrice": 49.99,
-      "newPrice": 39.99
-    },
-    {
-      "_id": 18,
-      "title": "Divergent",
-      "description": "On an appointed day of every year, all sixteen-year-olds must select the faction to which they will devote the rest of their lives. For Beatrice, the decision is between staying with her family and being who she really is",
-      "category": "business",
-      "trending": true,
-      "coverImage": "book-18.png",
-      "oldPrice": 18.99,
-      "newPrice": 12.99
-    },
-    {
-      "_id": 19,
-      "title": "The Alchemist",
-      "description": "Paulo Coelho's masterpiece tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure.",
-      "category": "adventure",
-      "trending": true,
-      "coverImage": "book-19.png",
-      "oldPrice": 35.99,
-      "newPrice": 27.99
-    },
-    {
-      "_id": 20,
-      "title": "Four Thousand Weeks",
-      "description": "Nobody needs to be told there isn’t enough time. We’re obsessed with our lengthening to-do lists, overfilled inboxes, work-life balance, and ceaseless battle against distraction; we’re deluged with advice on becoming more productive and efficient",
-      "category": "business",
-      "trending": false,
-      "coverImage": "book-20.png",
-      "oldPrice": 24.99,
-      "newPrice": 14.99
-    }
-  ]
-  
+  {
+    "title": "Tư duy nhanh và chậm",
+    "description": "Khám phá hai hệ thống tư duy: hệ thống nhanh, trực giác và hệ thống chậm, lý trí. Cuốn sách giúp hiểu rõ hơn về cách con người đưa ra quyết định và những sai lầm thường gặp.",
+    "category": "business",
+    "trending": true,
+    "coverImage": "book-1.png",
+    "oldPrice": 29.99,
+    "newPrice": 19.99
+  },
+  {
+    "title": "Cha giàu, cha nghèo",
+    "description": "Phân tích sự khác biệt trong tư duy tài chính giữa “cha giàu” và “cha nghèo”, nhấn mạnh tầm quan trọng của giáo dục tài chính và đầu tư sớm.",
+    "category": "business",
+    "trending": true,
+    "coverImage": "book-2.png",
+    "oldPrice": 24.99,
+    "newPrice": 14.99
+  },
+  {
+    "title": "Đừng bao giờ đi ăn một mình",
+    "description": "Kỹ năng xây dựng mối quan hệ và networking hiệu quả để thành công trong kinh doanh và cuộc sống.",
+    "category": "marketing",
+    "trending": true,
+    "coverImage": "book-3.png",
+    "oldPrice": 39.99,
+    "newPrice": 29.99
+  },
+  {
+    "title": "Nhà giả kim",
+    "description": "Một cuộc hành trình kỳ diệu của chàng chăn cừu Santiago đi tìm kho báu, biểu tượng cho hành trình tìm kiếm ước mơ và định mệnh.",
+    "category": "fiction",
+    "trending": false,
+    "coverImage": "book-4.png",
+    "oldPrice": 49.99,
+    "newPrice": 39.99
+  },
+  {
+    "title": "Mắt biếc",
+    "description": "Câu chuyện tình đơn phương cảm động, lãng mạn và buồn bã của Ngạn dành cho Hà Lan, gắn liền với ký ức tuổi thơ.",
+    "category": "fiction",
+    "trending": true,
+    "coverImage": "book-5.png",
+    "oldPrice": 19.99,
+    "newPrice": 9.99
+  },
+  {
+    "title": "Dracula",
+    "description": "Kể về Bá tước Dracula – ma cà rồng nổi tiếng nhất thế giới, đại diện cho nỗi sợ hãi của nhân loại trước cái chết và dục vọng.",
+    "category": "horror",
+    "trending": false,
+    "coverImage": "book-6.png",
+    "oldPrice": 44.99,
+    "newPrice": 34.99
+  },
+  {
+    "title": "IT – Gã Hề Ma Quái",
+    "description": "Một nhóm trẻ em phải đối mặt với ác quỷ dưới hình dạng gã hề tên Pennywise, gieo rắc nỗi kinh hoàng mỗi 27 năm.",
+    "category": "horror",
+    "trending": true,
+    "coverImage": "book-7.png",
+    "oldPrice": 59.99,
+    "newPrice": 49.99
+  },
+  {
+    "title": "Không gia đình",
+    "description": "Câu chuyện về cậu bé Remi bị bán cho một gánh xiếc, trải qua bao thăng trầm trước khi tìm lại được gia đình thật sự của mình.",
+    "category": "adventure",
+    "trending": true,
+    "coverImage": "book-8.png",
+    "oldPrice": 21.99,
+    "newPrice": 16.99
+  },
+  {
+    "title": "Harry Potter và Hòn đá Phù thủy",
+    "description": "Mở đầu cuộc hành trình kỳ ảo của cậu bé phù thủy Harry trong thế giới phép thuật, đấu tranh chống lại chúa tể Hắc ám Voldemort.",
+    "category": "adventure",
+    "trending": false,
+    "coverImage": "book-9.png",
+    "oldPrice": 27.99,
+    "newPrice": 18.99
+  },
+  {
+    "title": "Khởi nghiệp tinh gọn",
+    "description": "Giới thiệu phương pháp Lean Startup nhằm tối ưu hóa nguồn lực và tăng khả năng sống sót cho các doanh nghiệp khởi nghiệp.",
+    "category": "business",
+    "trending": true,
+    "coverImage": "book-10.png",
+    "oldPrice": 14.99,
+    "newPrice": 10.99
+  },
+  {
+    "title": "Thói quen thứ 8",
+    "description": "Tiếp nối \"7 thói quen\", cuốn sách giúp bạn khám phá ra \"tiếng nói\" của mình và truyền cảm hứng cho người khác phát triển.",
+    "category": "business",
+    "trending": true,
+    "coverImage": "book-11.png",
+    "oldPrice": 32.99,
+    "newPrice": 25.99
+  },
+  {
+    "title": "Ông trăm tuổi trèo qua cửa sổ và biến mất",
+    "description": "Một câu chuyện hài hước, phi lý về cuộc phiêu lưu của ông già trốn khỏi viện dưỡng lão, đan xen nhiều sự kiện lịch sử thế giới.",
+    "category": "fiction",
+    "trending": true,
+    "coverImage": "book-12.png",
+    "oldPrice": 19.99,
+    "newPrice": 9.99
+  },
+  {
+    "title": "Kafka bên bờ biển",
+    "description": "Một tác phẩm siêu thực, giàu biểu tượng, xoay quanh cậu bé Kafka trên hành trình chạy trốn khỏi lời nguyền và tìm kiếm bản ngã.",
+    "category": "fiction",
+    "trending": true,
+    "coverImage": "book-13.png",
+    "oldPrice": 26.99,
+    "newPrice": 21.99
+  },
+  {
+    "title": "Tuổi thơ dữ dội",
+    "description": "Một tiểu thuyết cảm động về thiếu niên Việt Nam tham gia kháng chiến chống Pháp, giàu tình yêu nước và lòng dũng cảm.",
+    "category": "fiction",
+    "trending": false,
+    "coverImage": "book-14.png",
+    "oldPrice": 34.99,
+    "newPrice": 24.99
+  },
+  {
+    "title": "Ngôi nhà ma ám",
+    "description": "Một tác phẩm kinh dị cổ điển với bầu không khí rùng rợn, khi một nhóm người đến sống và bị ám ảnh bởi ngôi nhà Hill House.",
+    "category": "horror",
+    "trending": false,
+    "coverImage": "book-15.png",
+    "oldPrice": 22.99,
+    "newPrice": 12.99
+  },
+  {
+    "title": "Phòng số 1408",
+    "description": "Một tiểu thuyết ngắn kể về một phòng khách sạn bị ma ám mà không ai sống sót được quá một giờ đồng hồ bên trong.",
+    "category": "horror",
+    "trending": false,
+    "coverImage": "book-16.png",
+    "oldPrice": 24.99,
+    "newPrice": 19.99
+  },
+  {
+    "title": "Cô gái nhà bên",
+    "description": "Dựa trên câu chuyện có thật, phản ánh sự tàn nhẫn, bạo hành tâm lý và thể xác đầy ám ảnh.",
+    "category": "adventure",
+    "trending": true,
+    "coverImage": "book-17.png",
+    "oldPrice": 49.99,
+    "newPrice": 39.99
+  },
+  {
+    "title": "Cuộc phiêu lưu của Tom Sawyer",
+    "description": "Tái hiện thế giới tuổi thơ với những trò nghịch ngợm, phiêu lưu mạo hiểm đầy hài hước và bài học nhân văn.",
+    "category": "adventure",
+    "trending": true,
+    "coverImage": "book-18.png",
+    "oldPrice": 18.99,
+    "newPrice": 12.99
+  },
+  {
+    "title": "Robinson Crusoe",
+    "description": "Robinson Crusoe là tác phẩm văn học cổ điển, được viết bởi nhà văn Daniel Defoe, nổi bật với câu chuyện về một người duy nhất sống trên đảo và tự tạo ra một cuộc sống mới cho mình.",
+    "category": "adventure",
+    "trending": true,
+    "coverImage": "book-19.png",
+    "oldPrice": 35.99,
+    "newPrice": 27.99
+  },
+  {
+    "title": "Hai vạn dặm dưới đáy biển",
+    "description": "Một cuộc phiêu lưu đầy hài hước và cảm động, kể về cuộc hành trình của hai anh em tàu thủy đi tìm bản ngã của mình trên đảo hoang và được cứu sống bởi người dân địa phương.",
+    "category": "adventure",
+    "trending": false,
+    "coverImage": "book-20.png",
+    "oldPrice": 24.99,
+    "newPrice": 14.99
+  }
+]

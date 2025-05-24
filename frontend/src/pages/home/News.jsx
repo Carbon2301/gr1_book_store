@@ -14,36 +14,36 @@ import news4 from '../../assets/news/news-4.png'
 
 
 const news = [
-    {
-        "id": 1,
-        "title": "Global Climate Summit Calls for Urgent Action",
-        "description": "World leaders gather at the Global Climate Summit to discuss urgent strategies to combat climate change, focusing on reducing carbon emissions and fostering renewable energy solutions.",
-        "image": news1
-    },
-    {
-        "id": 2,
-        "title": "Breakthrough in AI Technology Announced",
-        "description": "A major breakthrough in artificial intelligence has been announced by researchers, with new advancements promising to revolutionize industries from healthcare to finance.",
-        "image": news2
-    },
-    {
-        "id": 3,
-        "title": "New Space Mission Aims to Explore Distant Galaxies",
-        "description": "NASA has unveiled plans for a new space mission that will aim to explore distant galaxies, with hopes of uncovering insights into the origins of the universe.",
-        "image": news3
-    },
-    {
-        "id": 4,
-        "title": "Stock Markets Reach Record Highs Amid Economic Recovery",
-        "description": "Global stock markets have reached record highs as signs of economic recovery continue to emerge following the challenges posed by the global pandemic.",
-        "image": news4
-    },
-    {
-        "id": 5,
-        "title": "Innovative New Smartphone Released by Leading Tech Company",
-        "description": "A leading tech company has released its latest smartphone model, featuring cutting-edge technology, improved battery life, and a sleek new design.",
-        "image": news2
-    }
+  {
+    "id": 1,
+    "title": "Hội nghị Thượng đỉnh Khí hậu Toàn cầu kêu gọi hành động khẩn cấp",
+    "description": "Các nhà lãnh đạo thế giới đã tụ họp tại Hội nghị Thượng đỉnh Khí hậu Toàn cầu để thảo luận các chiến lược cấp bách nhằm chống biến đổi khí hậu, tập trung vào việc giảm khí thải carbon và thúc đẩy các giải pháp năng lượng tái tạo.",
+    "image": news1
+  },
+  {
+    "id": 2,
+    "title": "Đột phá trong công nghệ AI được công bố",
+    "description": "Một bước đột phá lớn trong lĩnh vực trí tuệ nhân tạo đã được các nhà nghiên cứu công bố, với những tiến bộ mới hứa hẹn sẽ cách mạng hóa nhiều ngành công nghiệp từ y tế đến tài chính.",
+    "image": news2
+  },
+  {
+    "id": 3,
+    "title": "Sứ mệnh không gian mới nhằm khám phá các thiên hà xa xôi",
+    "description": "NASA đã tiết lộ kế hoạch cho một sứ mệnh không gian mới nhằm khám phá các thiên hà ở xa, với hy vọng làm sáng tỏ thêm về nguồn gốc của vũ trụ.",
+    "image": news3
+  },
+  {
+    "id": 4,
+    "title": "Thị trường chứng khoán đạt đỉnh mới giữa bối cảnh phục hồi kinh tế",
+    "description": "Thị trường chứng khoán toàn cầu đã đạt mức cao kỷ lục khi các dấu hiệu phục hồi kinh tế tiếp tục xuất hiện sau những thách thức do đại dịch toàn cầu gây ra.",
+    "image": news4
+  },
+  {
+    "id": 5,
+    "title": "Công ty công nghệ hàng đầu ra mắt điện thoại thông minh mới",
+    "description": "Một công ty công nghệ hàng đầu vừa ra mắt mẫu điện thoại thông minh mới nhất, với công nghệ tiên tiến, thời lượng pin được cải thiện và thiết kế mới sang trọng.",
+    "image": news2
+  }
 ]
 
 const News = () => {

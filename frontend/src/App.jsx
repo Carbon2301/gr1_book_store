@@ -4,8 +4,7 @@ import { Navbar } from './components/Navbar';
 import Footer from './components/Footer';
 import { AuthProvider } from './context/AuthContext';
 
-function App() {
-
+function MainLayout() {
   return (
     <>
       <AuthProvider>
@@ -19,4 +18,4 @@ function App() {
   )
 }
 
-export default App
+export default MainLayout

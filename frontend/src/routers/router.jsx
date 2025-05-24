@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
-import App from '../App'
+import MainLayout from '../App'
 import Home from '../pages/home/Home'
 import Login from '../components/Login'
 import Register from '../components/Register'
@@ -11,11 +11,38 @@ import PrivateRoute from './PrivateRoute'
 import OrderPage from '../pages/books/OrderPage'
 import AdminRoute from './AdminRoute'
 import AdminLogin from '../components/AdminLogin'
+import DashboardLayout from '../pages/dashboard/DashboardLayout'
+import DashBoard from '../pages/dashboard/DashBoard'
+import ManageBook from '../pages/dashboard/manageBooks/ManageBook'
+import AddBook from '../pages/dashboard/addBook/AddBook'
+import EditBook from '../pages/dashboard/editBook/EditBook'
 
 const router = createBrowserRouter([
   {
+    path: "/dashboard",
+    element: <AdminRoute><DashboardLayout/></AdminRoute>,
+    children: [
+      {
+        path: "",
+        element: <AdminRoute><DashBoard/></AdminRoute>,
+      },
+      {
+        path: "add-new-book",
+        element: <AdminRoute><AddBook/></AdminRoute>,
+      },
+      {
+        path: "edit-book/:id",
+        element: <AdminRoute><EditBook/></AdminRoute>,
+      },
+      {
+        path: "manage-books",
+        element: <AdminRoute><ManageBook/></AdminRoute>,
+      }
+    ]
+  },
+  {
     path: "/",
-    element: <App/>,
+    element: <MainLayout/>,
     children: [
       {
         path: "/",
@@ -23,9 +50,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/orders",
-        element: <PrivateRoute>
-          <OrderPage/>
-        </PrivateRoute>,
+        element: <PrivateRoute><OrderPage/></PrivateRoute>,
       },
       {
         path: "/about",
@@ -45,9 +70,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/checkout",
-        element: <PrivateRoute>
-          <CheckoutPage/>
-          </PrivateRoute>,
+        element: <PrivateRoute><CheckoutPage/></PrivateRoute>,
       },
       {
         path: "/books/:id",
@@ -56,38 +79,6 @@ const router = createBrowserRouter([
       {
         path: "/admin",
         element: <AdminLogin/>,
-      },
-      {
-        path: "/dashboard",
-        element: <AdminRoute>
-          <div>Admin Dashboard</div>
-        </AdminRoute>,
-        children: [
-          {
-            path: "",
-            element: <AdminRoute>
-              <div>Dashboard Home</div>
-            </AdminRoute>,
-          },
-          {
-            path: "add-new-book",
-            element: <AdminRoute>
-              <div>Add New Book</div>
-            </AdminRoute>,
-          },
-          {
-            path: "edit-book/:id",
-            element: <AdminRoute>
-              <div>Edit Book</div>
-            </AdminRoute>,
-          },
-          {
-            path: "manage-books",
-            element: <AdminRoute>
-              <div>Manage Books</div>
-            </AdminRoute>,
-          }
-        ]
       }
     ],
   },

@@ -7,6 +7,7 @@ import { FaHeart } from "react-icons/fa6";
 import { GiShoppingBag } from "react-icons/gi";
 import { useSelector } from 'react-redux';
 import avatarImg from '../assets/avatar.png'
+import logo from '../assets/logo.png'
 import { useAuth } from '../context/AuthContext';
 
 const navigation = [
@@ -42,7 +43,7 @@ export const Navbar = () => {
                 {/* Left side */}
                 <div className="flex items-center md:gap-16 gap-4">
                     <Link to="/">
-                        <HiMiniBars3CenterLeft className="size-6" />
+                        <img src={logo} alt="Logo" className="h-10 w-auto mr-2" />
                     </Link>
 
                     {/* search input */}
