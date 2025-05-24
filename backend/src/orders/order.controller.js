@@ -4,6 +4,9 @@ const Book = require('../books/book.model');
 const createAOrder = async (req, res) => {
     try {
         const { name, email, address, phone, products } = req.body;
+        if (!products || products.length === 0) {
+            return res.status(400).json({ message: "Order must have at least one product." });
+        }
         // products: [{ productId, quantity }]
         let totalPrice = 0;
         const detailedProducts = await Promise.all(products.map(async (item) => {

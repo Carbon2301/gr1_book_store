@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { HiMiniBars3CenterLeft } from "react-icons/hi2";
 import { FaSearch } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa6";
@@ -23,10 +22,7 @@ const navigation = [
         name: "Cart Page",
         href: "/cart",
     },
-    {
-        name: "CheckOut",
-        href: "/checkout",
-    },
+
 ]
 
 export const Navbar = () => {

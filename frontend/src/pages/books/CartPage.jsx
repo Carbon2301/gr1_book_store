@@ -121,7 +121,10 @@ const CartPage = () => {
       <div className="mt-6">
         <Link
           to="/checkout"
-          className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+          className={`flex items-center justify-center rounded-md border border-transparent px-6 py-3 text-base font-medium text-white shadow-sm ${cartItems.length === 0 ? 'bg-gray-400 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-700'}`}
+          tabIndex={cartItems.length === 0 ? -1 : 0}
+          aria-disabled={cartItems.length === 0}
+          onClick={e => { if (cartItems.length === 0) e.preventDefault(); }}
         >
           Checkout
         </Link>

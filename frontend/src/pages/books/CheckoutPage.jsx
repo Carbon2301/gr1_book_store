@@ -22,6 +22,14 @@ const CheckoutPage = () => {
 
     const [isChecked, setIsChecked] = useState(false);
     const onSubmit = async (data) => {
+        if (cartItems.length === 0) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Your cart is empty!',
+                text: 'Please add at least one product before checkout.',
+            });
+            return;
+        }
         const newOrder = {
             name: data.name,
             email: currentUser?.email,
