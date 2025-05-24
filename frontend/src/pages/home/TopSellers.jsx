@@ -6,14 +6,15 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import { useFetchAllBooksQuery } from '../../redux/features/books/booksApi';
+import { useOutletContext } from 'react-router-dom';
 
 const categories = ["Choose a genre", "Business", "Fiction", "Horror", "Adventure"];
 
 export const TopSellers = () => {
 
     const [selectedCategory, setSelectedCategory] = useState("Choose a genre");
-    
-    const {data: books = []} = useFetchAllBooksQuery();
+    const { search = "" } = useOutletContext() || {};
+    const {data: books = []} = useFetchAllBooksQuery(search);
 
     const filteredBooks = selectedCategory === "Choose a genre" ? books : books.filter(book => book.category === selectedCategory.toLowerCase());
 

@@ -3,14 +3,16 @@ import './App.css'
 import { Navbar } from './components/Navbar';
 import Footer from './components/Footer';
 import { AuthProvider } from './context/AuthContext';
+import React, { useState } from 'react';
 
 function MainLayout() {
+  const [search, setSearch] = useState("");
   return (
     <>
       <AuthProvider>
-      <Navbar/>
+      <Navbar search={search} setSearch={setSearch} />
       <main className='min-h-screen max-w-screen-2xl mx-auto px-4 py-6 font-primary'>
-        <Outlet />
+        <Outlet context={{ search }} />
       </main>
       <Footer/>
       </AuthProvider>

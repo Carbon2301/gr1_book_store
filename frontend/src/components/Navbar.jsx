@@ -25,7 +25,7 @@ const navigation = [
 
 ]
 
-export const Navbar = () => {
+export const Navbar = ({ search, setSearch }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const cartItems = useSelector(state => state.cart.cartItems);
     
@@ -45,7 +45,7 @@ export const Navbar = () => {
                     {/* search input */}
                     <div className="relative sm:w-72 w-40 space-x-2">
                         <FaSearch className="absolute inline-block top-1/2 left-3 -translate-y-1/2 text-gray-500" />
-                        <input type="text" placeholder="Search here" className="bg-[#EAEAEA] w-full py-1 md:px-8 px-6 rounded-md focus:outline-none" />
+                        <input type="text" placeholder="Search here" className="bg-[#EAEAEA] w-full py-1 md:px-8 px-6 rounded-md focus:outline-none" value={search} onChange={e => setSearch(e.target.value)} />
                     </div>
                 </div>
 

@@ -6,10 +6,11 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import { BookCard } from '../books/BookCard';
 import { useFetchAllBooksQuery } from '../../redux/features/books/booksApi';
+import { useOutletContext } from 'react-router-dom';
 
 const Recommended = () => {
-
-  const {data: books = []} = useFetchAllBooksQuery();
+  const { search = "" } = useOutletContext() || {};
+  const {data: books = []} = useFetchAllBooksQuery(search);
 
   return (
     <div className='py-16'>
