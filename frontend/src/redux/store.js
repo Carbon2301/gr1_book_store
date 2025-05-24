@@ -13,3 +13,8 @@ export const store = configureStore({
     getDefaultMiddleware().concat(booksApi.middleware, ordersApi.middleware),
   devTools: true,
 })
+
+// Lưu cartItems vào localStorage mỗi khi thay đổi
+store.subscribe(() => {
+  localStorage.setItem('cartItems', JSON.stringify(store.getState().cart.cartItems));
+});
