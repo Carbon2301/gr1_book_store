@@ -122,5 +122,5 @@ npm run dev
 ```
 
 ## Contact
-Hữu An - trinhhuuan372@gmail.com
-https://web.facebook.com/trinhan2301.hls/
+- Hữu An - trinhhuuan372@gmail.com
+- https://web.facebook.com/trinhan2301.hls/

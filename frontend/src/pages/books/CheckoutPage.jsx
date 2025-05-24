@@ -32,8 +32,10 @@ const CheckoutPage = () => {
                 zipcode: data.zipcode,
             },
             phone: data.phone,
-            productIds: cartItems.map(item => item?._id),
-            totalPrice: totalPrice,
+            products: cartItems.map(item => ({
+                productId: item._id,
+                quantity: item.quantity || 1
+            })),
         }
         
         try {

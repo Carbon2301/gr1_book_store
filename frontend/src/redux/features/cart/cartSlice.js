@@ -11,7 +11,7 @@ const cartSlice = createSlice({
         addToCart: (state, action) => {
             const existingItem = state.cartItems.find(item => item._id === action.payload._id);
             if(!existingItem){
-                state.cartItems.push(action.payload)
+                state.cartItems.push({ ...action.payload, quantity: 1 })
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
@@ -32,11 +32,12 @@ const cartSlice = createSlice({
                     }
                 });
             }else{
+                existingItem.quantity = (existingItem.quantity || 1) + 1;
                 Swal.fire({
                     position: "top-end",
                     icon: "warning",
                     title: "Item already in cart",
-                    text: "This item is already in your shopping cart!",
+                    text: "This item is already in your shopping cart! Quantity increased!",
                     showConfirmButton: false,
                     timer: 1500,
                     timerProgressBar: true,
@@ -77,9 +78,28 @@ const cartSlice = createSlice({
         },
         clearCart: (state) => {
             state.cartItems = [];
+        },
+        increaseQuantity: (state, action) => {
+            const item = state.cartItems.find(i => i._id === action.payload);
+            if (item) item.quantity = (item.quantity || 1) + 1;
+        },
+        decreaseQuantity: (state, action) => {
+            const item = state.cartItems.find(i => i._id === action.payload);
+            if (item && item.quantity > 1) {
+                item.quantity -= 1;
+            }
+        },
+        setQuantity: (state, action) => {
+            const { id, quantity } = action.payload;
+            const item = state.cartItems.find(i => i._id === id);
+            let q = parseInt(quantity, 10);
+            if (item) {
+                if (isNaN(q) || q < 1) q = 1;
+                item.quantity = q;
+            }
         }
     }
 })
 
-export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, clearCart, increaseQuantity, decreaseQuantity, setQuantity } = cartSlice.actions;
 export default cartSlice.reducer;

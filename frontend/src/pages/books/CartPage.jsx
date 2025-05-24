@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { getImgUrl } from '../../utils/getImgUrl'
 import { useDispatch } from 'react-redux'
-import { removeFromCart, clearCart } from '../../redux/features/cart/cartSlice'
+import { removeFromCart, clearCart, increaseQuantity, decreaseQuantity, setQuantity } from '../../redux/features/cart/cartSlice'
 
 const CartPage = () => {
     const cartItems = useSelector(state => state.cart.cartItems);
     const dispatch = useDispatch();
-    const totalPrice = cartItems.reduce((acc, item) => acc + item.newPrice, 0).toFixed(2);
-    const totalQuantity = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+    const totalPrice = cartItems.reduce((acc, item) => acc + (item.newPrice * (item.quantity || 1)), 0).toFixed(2);
+    const totalQuantity = cartItems.reduce((acc, item) => acc + (item.quantity || 1), 0);
+    const [inputQuantities, setInputQuantities] = useState({});
 
     const handleRemoveFromCart = (product) => {
         dispatch(removeFromCart(product));
@@ -18,6 +19,19 @@ const CartPage = () => {
     const handleClearCart = () => {
         dispatch(clearCart());
     }
+
+    const handleInputChange = (id, value) => {
+        if (/^\d*$/.test(value)) {
+            setInputQuantities(prev => ({ ...prev, [id]: value }));
+        }
+    };
+
+    const handleInputBlur = (id, value) => {
+        let q = parseInt(value, 10);
+        if (isNaN(q) || q < 1) q = 1;
+        dispatch(setQuantity({ id, quantity: q }));
+        setInputQuantities(prev => ({ ...prev, [id]: q }));
+    };
 
   return (
     <>
@@ -62,8 +76,20 @@ const CartPage = () => {
                             <p className="mt-1 text-sm text-gray-500 capitalize"><strong>Category: </strong>{product?.category}</p>
                           </div>
                           <div className="flex flex-1 flex-wrap items-end justify-between space-y-2 text-sm">
-                            <p className="text-gray-500"><strong>Qty:</strong> 1</p>
-      
+                            <div className="flex items-center gap-2">
+                              <button onClick={() => dispatch(decreaseQuantity(product._id))} className="px-2 py-1 bg-gray-200 rounded" disabled={product.quantity === 1}>-</button>
+                              <input
+                                type="number"
+                                min={1}
+                                step={1}
+                                value={inputQuantities[product._id] !== undefined ? inputQuantities[product._id] : product.quantity || 1}
+                                onChange={e => handleInputChange(product._id, e.target.value)}
+                                onBlur={e => handleInputBlur(product._id, e.target.value)}
+                                className="w-12 text-center border rounded"
+                                style={{ MozAppearance: 'textfield' }}
+                              />
+                              <button onClick={() => dispatch(increaseQuantity(product._id))} className="px-2 py-1 bg-gray-200 rounded">+</button>
+                            </div>
                             <div className="flex">
                               <button onClick={() => handleRemoveFromCart(product)}
                                type="button" className="font-medium text-indigo-600 hover:text-indigo-500">

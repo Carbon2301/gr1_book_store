@@ -1,8 +1,31 @@
 const Order = require('./order.model');
+const Book = require('../books/book.model');
 
 const createAOrder = async (req, res) => {
     try {
-        const newOrder = new Order(req.body);
+        const { name, email, address, phone, products } = req.body;
+        // products: [{ productId, quantity }]
+        let totalPrice = 0;
+        const detailedProducts = await Promise.all(products.map(async (item) => {
+            const book = await Book.findById(item.productId);
+            if (!book) throw new Error('Book not found');
+            const price = book.newPrice;
+            totalPrice += price * item.quantity;
+            return {
+                productId: book._id,
+                title: book.title,
+                price,
+                quantity: item.quantity
+            };
+        }));
+        const newOrder = new Order({
+            name,
+            email,
+            address,
+            phone,
+            products: detailedProducts,
+            totalPrice
+        });
         const savedOrder = await newOrder.save();
         res.status(200).json(savedOrder);
     } catch (error) {
