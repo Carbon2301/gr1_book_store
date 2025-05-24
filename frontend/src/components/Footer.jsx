@@ -47,13 +47,13 @@ const Footer = () => {
 
         {/* Right Side - Social Icons */}
         <div className="flex gap-6">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+          <a href="https://web.facebook.com/trinhan2301.hls/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
             <FaFacebook size={24} />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+          <a href="https://x.com/huuan2301" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
             <FaTwitter size={24} />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+          <a href="https://www.instagram.com/_thuan_231/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
             <FaInstagram size={24} />
           </a>
         </div>

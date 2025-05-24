@@ -13,9 +13,9 @@ export const BookCard = ({book}) => {
     dispatch(addToCart(product))
   }
   return (
-    <div className=" rounded-lg transition-shadow duration-300">
+    <div className="rounded-lg transition-shadow duration-300 hover:shadow-lg hover:scale-[1.02]">
   <div
-    className="flex flex-col sm:flex-row sm:items-center sm:h-72  sm:justify-center gap-4"
+    className="flex flex-col sm:flex-row sm:items-center sm:h-72 sm:justify-center gap-4"
   >
     <div className="sm:h-72 sm:flex-shrink-0 border rounded-md">
       <Link to={`/books/${book._id}`}>
@@ -27,16 +27,20 @@ export const BookCard = ({book}) => {
       </Link>
     </div>
 
-    <div>
+    <div className="flex-1 min-w-0 overflow-hidden">
       <Link to={`/books/${book._id}`}>
-      <h3 className="text-xl font-semibold hover:text-blue-600 mb-3">
+      <h3 className="text-xl font-semibold hover:text-blue-600 mb-3 break-words whitespace-normal line-clamp-2">
           {book?.title}
       </h3>
       </Link>
-      <p className="text-gray-600 mb-5">{book.description.length > 80 ? `${book?.description.slice(0, 80)}...` : book.description}</p>
+      <p className="text-gray-600 mb-5 break-words whitespace-normal line-clamp-3">
+        {book.description}
+      </p>
       <p className="font-medium mb-5">
-        ${book?.newPrice} <span className="line-through font-normal ml-2">
-        ${book?.oldPrice}</span>
+        ${book?.newPrice}
+        {book?.oldPrice && (
+          <span className="line-through font-normal ml-2">${book?.oldPrice}</span>
+        )}
       </p>
       <button onClick={() => handleAddToCart(book)} className="btn-primary px-6 space-x-1 flex items-center gap-1 ">
         <FiShoppingCart className="" />

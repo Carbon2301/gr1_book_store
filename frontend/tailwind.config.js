@@ -17,6 +17,6 @@ export default {
       'secondary': ["Nunito Sans", "sans-serif"]
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 } 
 }
