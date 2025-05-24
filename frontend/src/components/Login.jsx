@@ -8,6 +8,7 @@ import { useAuth } from '../context/AuthContext';
 const Login = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const { loginUser, signInWithGoogle } = useAuth();
+    const [message, setMessage] = useState("")
     const navigate = useNavigate();
 
     const onSubmit = async (data) => {
@@ -30,7 +31,6 @@ const Login = () => {
             console.log(error);
         }
     }
-    const [message, setMessage] = useState("")
   return (
     <div className='h-[calc(100vh-120px)] flex items-center justify-center'>
     <div className="w-full max-w-sm mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
