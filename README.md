@@ -7,6 +7,7 @@ A modern web application for managing and selling books online, built with the M
 ### For Users
 - Browse and search books
 - View book details
+- Favourite books
 - Add books to shopping cart
 - Place orders
 - View order history
@@ -105,8 +106,7 @@ npm install
 3. Set up environment variables
 ```bash
 # In backend directory
-cp .env.example .env
-# Edit .env with your configuration
+# Create .env with your configuration (DB_URL, JWT_SECRET_KEY)
 
 # In frontend directory
 # Create .env.local file with Firebase configuration
@@ -114,10 +114,10 @@ cp .env.example .env
 
 4. Start the development servers
 ```bash
-# Start backend server (from backend directory)
+# Start backend server
 npm run start:dev
 
-# Start frontend server (from frontend directory)
+# Start frontend server
 npm run dev
 ```
 
