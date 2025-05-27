@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import footerLogo  from "../assets/logo.png"
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (!email) return;
+    Swal.fire({
+      icon: 'success',
+      title: 'Subscribed!',
+      text: 'Thank you for subscribing to our newsletter.',
+      confirmButtonColor: '#FFD600',
+    }).then(() => {
+      window.location.reload();
+    });
+  };
+
   return (
-    <footer className="bg-gray-900 text-white py-10 px-4">
+    <footer id="footer-subscribe" className="bg-gray-900 text-white py-10 px-4">
       {/* Top Section */}
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         {/* Left Side - Logo and Nav */}
@@ -15,7 +31,7 @@ const Footer = () => {
             <li><Link to="/" className="hover:text-primary">Home</Link></li>
             <li><a href="#services" className="hover:text-primary">Services</a></li>
             <li><Link to="/about" className="hover:text-primary">About Us</Link></li>
-            <li><a href="#contact" className="hover:text-primary">Contact</a></li>
+            <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
           </ul>
         </div>
 
@@ -24,16 +40,19 @@ const Footer = () => {
           <p className="mb-4">
             Subscribe to our newsletter to receive the latest updates, news, and offers!
           </p>
-          <div className="flex">
+          <form className="flex" onSubmit={handleSubscribe}>
             <input
               type="email"
               placeholder="Enter your email"
               className="w-full px-4 py-2 rounded-l-md text-black"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              required
             />
-            <button className="bg-primary px-6 py-2 rounded-r-md hover:bg-primary-dark">
+            <button type="submit" className="bg-primary px-6 py-2 rounded-r-md hover:bg-primary-dark">
               Subscribe
             </button>
-          </div>
+          </form>
         </div>
       </div>
 

@@ -22,7 +22,14 @@ export const Banner = () => {
                 có điều gì đó dành cho tất cả mọi người.
             </p>
 
-            <button className='btn-primary'>Subcribe</button>
+            <button
+              className='btn-primary'
+              onClick={() => {
+                document.getElementById('footer-subscribe')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Subscribe
+            </button>
         </div>
 
     </div>

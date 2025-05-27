@@ -18,6 +18,7 @@ import AddBook from '../pages/dashboard/addBook/AddBook'
 import EditBook from '../pages/dashboard/editBook/EditBook'
 import FavoritesPage from '../pages/FavoritesPage'
 import AboutUs from '../pages/AboutUs'
+import Contact from '../pages/Contact'
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutUs/>,
+      },
+      {
+        path: "/contact",
+        element: <Contact/>,
       },
       {
         path: "/login",
