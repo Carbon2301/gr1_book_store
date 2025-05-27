@@ -1,7 +1,7 @@
 import React from 'react'
 import footerLogo  from "../assets/logo.png"
-
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,9 +12,9 @@ const Footer = () => {
         <div className="md:w-1/2 w-full">
           <img src={footerLogo} alt="Logo" className="mb-5 w-36" />
           <ul className="flex flex-col md:flex-row gap-4">
-            <li><a href="#home" className="hover:text-primary">Home</a></li>
+            <li><Link to="/" className="hover:text-primary">Home</Link></li>
             <li><a href="#services" className="hover:text-primary">Services</a></li>
-            <li><a href="#about" className="hover:text-primary">About Us</a></li>
+            <li><Link to="/about" className="hover:text-primary">About Us</Link></li>
             <li><a href="#contact" className="hover:text-primary">Contact</a></li>
           </ul>
         </div>

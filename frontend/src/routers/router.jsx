@@ -17,6 +17,7 @@ import ManageBook from '../pages/dashboard/manageBooks/ManageBook'
 import AddBook from '../pages/dashboard/addBook/AddBook'
 import EditBook from '../pages/dashboard/editBook/EditBook'
 import FavoritesPage from '../pages/FavoritesPage'
+import AboutUs from '../pages/AboutUs'
 
 const router = createBrowserRouter([
   {
@@ -55,7 +56,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <h1>About</h1>,
+        element: <AboutUs/>,
       },
       {
         path: "/login",

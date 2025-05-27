@@ -23,7 +23,6 @@ const navigation = [
         name: "Cart Page",
         href: "/cart",
     },
-
 ]
 
 export const Navbar = ({ search, setSearch }) => {
@@ -33,16 +32,16 @@ export const Navbar = ({ search, setSearch }) => {
     const {currentUser, logoutUser} = useAuth();
     const handleLogout = async () => {
         logoutUser();
-        }
+    }
     return (
       <header className="w-full bg-white shadow">
-        <nav className="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-4">
+        <nav className="max-w-screen-xl mx-auto flex items-center justify-between w-full px-2 sm:px-4 py-4 relative">
           {/* Left: Logo + Search */}
-          <div className="flex items-center gap-x-8">
-            <Link to="/">
+          <div className="flex items-center gap-x-4 sm:gap-x-8">
+            <Link to="/" className="flex-shrink-0">
               <img src={logo} alt="Logo" className="h-10 w-auto" />
             </Link>
-            <div className="relative w-64">
+            <div className="relative w-48 sm:w-64">
               <FaSearch className="absolute top-1/2 left-3 -translate-y-1/2 text-gray-500" />
               <input
                 type="text"
@@ -54,9 +53,9 @@ export const Navbar = ({ search, setSearch }) => {
             </div>
           </div>
           {/* Right: User, Tym, Cart */}
-          <div className="flex items-center gap-x-6">
+          <div className="flex items-center gap-x-4 sm:gap-x-6 relative">
             {/* User */}
-            <div>
+            <div className="relative">
               {currentUser ? (
                 <>
                   <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
@@ -68,7 +67,7 @@ export const Navbar = ({ search, setSearch }) => {
                   </button>
                   {/* show dropdown */}
                   {isDropdownOpen && (
-                    <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-40">
+                    <div className="absolute top-full right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-40">
                       <ul className="py-2">
                         {navigation.map((item) => (
                           <li key={item.name} onClick={() => setIsDropdownOpen(false)}>
