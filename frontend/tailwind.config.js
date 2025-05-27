@@ -11,12 +11,12 @@ export default {
         'secondary': '#0D0842',
         'blackBG': '#F3F3F3',
         'Favorite': '#FF5581'
-    },
-    fontFamily: {
-      'primary': ["Montserrat", "sans-serif"],
-      'secondary': ["Nunito Sans", "sans-serif"]
+      },
+      fontFamily: {
+        'primary': ["Montserrat", "sans-serif"],
+        'secondary': ["Nunito Sans", "sans-serif"]
+      },
     },
   },
-  plugins: [require('@tailwindcss/line-clamp')],
-} 
+  plugins: [],
 }

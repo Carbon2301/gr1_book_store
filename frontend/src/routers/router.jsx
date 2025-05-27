@@ -16,6 +16,7 @@ import DashBoard from '../pages/dashboard/DashBoard'
 import ManageBook from '../pages/dashboard/manageBooks/ManageBook'
 import AddBook from '../pages/dashboard/addBook/AddBook'
 import EditBook from '../pages/dashboard/editBook/EditBook'
+import FavoritesPage from '../pages/FavoritesPage'
 
 const router = createBrowserRouter([
   {
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
       {
         path: "/admin",
         element: <AdminLogin/>,
+      },
+      {
+        path: "/favorites",
+        element: <FavoritesPage/>,
       }
     ],
   },

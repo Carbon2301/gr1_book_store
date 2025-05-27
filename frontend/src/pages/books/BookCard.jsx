@@ -4,10 +4,13 @@ import { getImgUrl } from '../../utils/getImgUrl';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/features/cart/cartSlice';
-
+import { FaHeart } from "react-icons/fa";
+import { useFavorites } from '../../context/FavoriteContext';
 
 export const BookCard = ({book}) => {
   const dispatch = useDispatch();
+  const { favorites, addFavorite, removeFavorite } = useFavorites();
+  const isFavorite = favorites.some((item) => item._id === book._id);
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product))
@@ -17,7 +20,7 @@ export const BookCard = ({book}) => {
   <div
     className="flex flex-col sm:flex-row sm:items-center sm:h-72 sm:justify-center gap-4"
   >
-    <div className="sm:h-72 sm:flex-shrink-0 border rounded-md">
+    <div className="sm:h-72 sm:flex-shrink-0 border rounded-md relative">
       <Link to={`/books/${book._id}`}>
         <img
           src={`${getImgUrl(book?.coverImage)}`}
@@ -25,6 +28,14 @@ export const BookCard = ({book}) => {
           className="w-full bg-cover p-2 rounded-md cursor-pointer hover:scale-105 transition-all duration-200"
         />
       </Link>
+      {/* Icon Tym */}
+      <button
+        onClick={() => isFavorite ? removeFavorite(book._id) : addFavorite(book)}
+        className="absolute top-2 right-2 bg-white rounded-full p-1 shadow hover:scale-110 transition-transform"
+        title={isFavorite ? "Bỏ yêu thích" : "Thêm vào yêu thích"}
+      >
+        <FaHeart color={isFavorite ? "#FF5581" : "#ccc"} size={22} />
+      </button>
     </div>
 
     <div className="flex-1 min-w-0 overflow-hidden">
