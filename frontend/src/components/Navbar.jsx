@@ -38,7 +38,14 @@ export const Navbar = ({ search, setSearch }) => {
         <nav className="max-w-screen-xl mx-auto flex items-center justify-between w-full px-2 sm:px-4 py-4 relative">
           {/* Left: Logo + Search */}
           <div className="flex items-center gap-x-4 sm:gap-x-8">
-            <Link to="/" className="flex-shrink-0">
+            <Link
+              to="/"
+              className="flex-shrink-0"
+              onClick={e => {
+                e.preventDefault();
+                window.location.reload();
+              }}
+            >
               <img src={logo} alt="Logo" className="h-10 w-auto" />
             </Link>
             <div className="relative w-48 sm:w-64">
