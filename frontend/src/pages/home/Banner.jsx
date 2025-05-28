@@ -15,7 +15,7 @@ export const Banner = () => {
         </div>
 
         <div className='md:w-1/2 w-full'>
-            <h1 className='md:text-5xl text-2xl font-medium mb-7'>Sách mới tuần này</h1>
+            <h1 className='md:text-5xl text-2xl font-medium mb-7'>This Week’s New Arrivals</h1>
             <p className='mb-10'>Đã đến lúc cập nhật danh sách đọc sách của bạn với một số tác phẩm
                 mới nhất và hay nhất trong thế giới văn học. Từ những cuốn tiểu thuyết giật gân
                 đầy kịch tính đến những hồi ký cuốn hút, loạt sách mới phát hành trong tuần này

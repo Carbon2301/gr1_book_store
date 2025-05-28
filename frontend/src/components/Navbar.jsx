@@ -41,10 +41,7 @@ export const Navbar = ({ search, setSearch }) => {
             <Link
               to="/"
               className="flex-shrink-0"
-              onClick={e => {
-                e.preventDefault();
-                window.location.reload();
-              }}
+              onClick={() => setSearch("")}
             >
               <img src={logo} alt="Logo" className="h-10 w-auto" />
             </Link>
