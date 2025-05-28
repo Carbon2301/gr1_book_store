@@ -107,9 +107,6 @@ npm run start:dev
 npm run dev
 ```
 
-## Live Demo
-- [Frontend on Vercel](https://book-store-frontend-two-woad.vercel.app/)
-
 ## Contact
 - Hữu An - trinhhuuan372@gmail.com
 - https://web.facebook.com/trinhan2301.hls/
