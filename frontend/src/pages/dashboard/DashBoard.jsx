@@ -35,97 +35,137 @@ const Dashboard = () => {
 
   return (
     <>
-     <section className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-              <div className="flex items-center p-8 bg-white shadow rounded-lg">
-                <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-purple-600 bg-purple-100 rounded-full mr-6">
-                <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
+     <section className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 mb-8">
+              {/* Total Books Card */}
+              <div className="relative bg-gradient-to-br from-purple-500 to-purple-700 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="flex items-center justify-between">
+                  <div className="text-white">
+                    <h3 className="text-sm font-medium opacity-90">Total Books</h3>
+                    <p className="text-3xl font-bold mt-2">{data?.totalBooks}</p>
+                    <div className="flex items-center mt-2 text-purple-100">
+                      <span className="text-xs">+12% from last month</span>
+                    </div>
+                  </div>
+                  <div className="bg-white bg-opacity-20 p-3 rounded-xl">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
                 </div>
-                <div>
-                  <span className="block text-2xl font-bold">{data?.totalBooks}</span>
-                  <span className="block text-gray-500">Products</span>
-                </div>
+                <div className="absolute top-0 right-0 w-20 h-20 bg-white bg-opacity-10 rounded-full -mr-10 -mt-10"></div>
               </div>
-              <div className="flex items-center p-8 bg-white shadow rounded-lg">
-                <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-green-600 bg-green-100 rounded-full mr-6">
-                  <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
+
+              {/* Total Sales Card */}
+              <div className="relative bg-gradient-to-br from-emerald-500 to-emerald-700 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="flex items-center justify-between">
+                  <div className="text-white">
+                    <h3 className="text-sm font-medium opacity-90">Total Sales</h3>
+                    <p className="text-3xl font-bold mt-2">${data?.totalSales}</p>
+                    <div className="flex items-center mt-2 text-emerald-100">
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      </svg>
+                      <span className="text-xs">+18% from last month</span>
+                    </div>
+                  </div>
+                  <div className="bg-white bg-opacity-20 p-3 rounded-xl">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                    </svg>
+                  </div>
                 </div>
-                <div>
-                  <span className="block text-2xl font-bold">${data?.totalSales}</span>
-                  <span className="block text-gray-500">Total Sales</span>
-                </div>
+                <div className="absolute top-0 right-0 w-20 h-20 bg-white bg-opacity-10 rounded-full -mr-10 -mt-10"></div>
               </div>
-              <div className="flex items-center p-8 bg-white shadow rounded-lg">
-                <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-red-600 bg-red-100 rounded-full mr-6">
-                  <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
-                  </svg>
+
+              {/* Trending Books Card */}
+              <div className="relative bg-gradient-to-br from-orange-500 to-red-600 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="flex items-center justify-between">
+                  <div className="text-white">
+                    <h3 className="text-sm font-medium opacity-90">Trending Books</h3>
+                    <p className="text-3xl font-bold mt-2">{data?.trendingBooks}</p>
+                    <div className="flex items-center mt-2 text-orange-100">
+                      <span className="text-xs bg-white bg-opacity-20 px-2 py-1 rounded-full">+13% this month</span>
+                    </div>
+                  </div>
+                  <div className="bg-white bg-opacity-20 p-3 rounded-xl">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
+                    </svg>
+                  </div>
                 </div>
-                <div>
-                  <span className="inline-block text-2xl font-bold">{data?.trendingBooks}</span>
-                  <span className="inline-block text-xl text-gray-500 font-semibold">(13%)</span>
-                  <span className="block text-gray-500">Trending Books in This Month</span>
-                </div>
+                <div className="absolute top-0 right-0 w-20 h-20 bg-white bg-opacity-10 rounded-full -mr-10 -mt-10"></div>
               </div>
-              <div className="flex items-center p-8 bg-white shadow rounded-lg">
-                <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-blue-600 bg-blue-100 rounded-full mr-6">
-                <MdIncompleteCircle className='size-6'/>
+
+              {/* Total Orders Card */}
+              <div className="relative bg-gradient-to-br from-blue-500 to-blue-700 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="flex items-center justify-between">
+                  <div className="text-white">
+                    <h3 className="text-sm font-medium opacity-90">Total Orders</h3>
+                    <p className="text-3xl font-bold mt-2">{data?.totalOrders}</p>
+                    <div className="flex items-center mt-2 text-blue-100">
+                      <span className="text-xs">+5% from last week</span>
+                    </div>
+                  </div>
+                  <div className="bg-white bg-opacity-20 p-3 rounded-xl">
+                    <MdIncompleteCircle className='w-8 h-8 text-white'/>
+                  </div>
                 </div>
-                <div>
-                  <span className="block text-2xl font-bold">{data?.totalOrders}</span>
-                  <span className="block text-gray-500">Total Orders</span>
-                </div>
+                <div className="absolute top-0 right-0 w-20 h-20 bg-white bg-opacity-10 rounded-full -mr-10 -mt-10"></div>
               </div>
             </section>
-            <section className="grid md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-3 xl:grid-flow-col gap-6">
-              <div className="flex flex-col md:col-span-2 md:row-span-2 bg-white shadow rounded-lg">
-                <div className="px-6 py-5 font-semibold border-b border-gray-100"></div>
-                <div className="p-4 flex-grow">
-                  <div className="flex items-center justify-center h-full px-4 py-16 text-gray-400 text-3xl font-semibold bg-gray-100 border-2 border-gray-200 border-dashed rounded-md">
+            <section className="grid md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-3 xl:grid-flow-col gap-8">
+              <div className="flex flex-col md:col-span-2 md:row-span-2 bg-white shadow-xl rounded-2xl overflow-hidden">
+                <div className="bg-gradient-to-r from-purple-500 to-blue-600 px-6 py-4">
+                  <h3 className="text-white font-bold text-lg">Revenue Analytics</h3>
+                  <p className="text-purple-100 text-sm">Monthly performance overview</p>
+                </div>
+                <div className="p-6 flex-grow">
                   <RevenueChart />
+                </div>
+              </div>
+              <div className="bg-gradient-to-br from-yellow-400 to-orange-500 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div className="flex items-center justify-between">
+                  <div className="text-white">
+                    <h3 className="text-sm font-medium opacity-90">Pending Orders</h3>
+                    <p className="text-3xl font-bold mt-2">02</p>
+                    <span className="text-xs bg-white bg-opacity-20 px-2 py-1 rounded-full mt-2 inline-block">Urgent</span>
+                  </div>
+                  <div className="bg-white bg-opacity-20 p-3 rounded-xl">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
                   </div>
                 </div>
               </div>
-              <div className="flex items-center p-8 bg-white shadow rounded-lg">
-                <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-yellow-600 bg-yellow-100 rounded-full mr-6">
-                  <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
-                    <path fill="#fff" d="M12 14l9-5-9-5-9 5 9 5z" />
-                    <path fill="#fff" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
-                  </svg>
-                </div>
-                <div>
-                  <span className="block text-2xl font-bold">02</span>
-                  <span className="block text-gray-500">Orders left</span>
-                </div>
-              </div>
-              <div className="flex items-center p-8 bg-white shadow rounded-lg">
-                <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-teal-600 bg-teal-100 rounded-full mr-6">
-                  <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <span className="block text-2xl font-bold">139</span>
-                  <span className="block text-gray-500">Website visits (last day)</span>
-                </div>
-              </div>
-              <div className="row-span-3 bg-white shadow rounded-lg">
-                <div className="flex items-center justify-between px-6 py-5 font-semibold border-b border-gray-100">
-                  <span>Users by average order</span>
-                  <button type="button" className="inline-flex justify-center rounded-md px-1 -mr-1 bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-600" id="options-menu" aria-haspopup="true" aria-expanded="true">
-                    Descending
-                    <svg className="-mr-1 ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+              <div className="bg-gradient-to-br from-teal-400 to-cyan-600 p-6 rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-300">
+                <div className="flex items-center justify-between">
+                  <div className="text-white">
+                    <h3 className="text-sm font-medium opacity-90">Website Visits</h3>
+                    <p className="text-3xl font-bold mt-2">139</p>
+                    <span className="text-xs text-teal-100">Today</span>
+                  </div>
+                  <div className="bg-white bg-opacity-20 p-3 rounded-xl">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                     </svg>
-                  </button>
-    
+                  </div>
+                </div>
+              </div>
+              <div className="row-span-3 bg-white shadow-xl rounded-2xl overflow-hidden">
+                <div className="bg-gradient-to-r from-indigo-500 to-purple-600 px-6 py-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-white font-bold text-lg">Top Customers</h3>
+                      <p className="text-indigo-100 text-sm">By average order value</p>
+                    </div>
+                    <div className="bg-white bg-opacity-20 px-3 py-1 rounded-lg">
+                      <span className="text-white text-xs font-medium">This Month</span>
+                    </div>
+                  </div>
                 </div>
                 <div className="overflow-y-auto" style={{maxHeight: '24rem'}}>
-                  <ul className="p-6 space-y-6">
+                  <ul className="p-6 space-y-4">
                     <li className="flex items-center">
                       <div className="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
                         <img src="data:image/jpeg;base64,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" alt=""/>

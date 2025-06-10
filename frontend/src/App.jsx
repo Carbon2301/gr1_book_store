@@ -13,15 +13,15 @@ function MainLayout() {
     <>
       <ScrollToTop />
       <ThemeProvider>
-        <AuthProvider>
+      <AuthProvider>
           <div className="min-h-screen bg-white dark:bg-dark-bg transition-colors duration-300">
-            <Navbar search={search} setSearch={setSearch} />
+      <Navbar search={search} setSearch={setSearch} />
             <main className='min-h-screen max-w-screen-2xl mx-auto px-4 pt-24 pb-6 font-primary text-gray-900 dark:text-dark-text'>
-              <Outlet context={{ search }} />
-            </main>
-            <Footer/>
+        <Outlet context={{ search }} />
+      </main>
+      <Footer/>
           </div>
-        </AuthProvider>
+      </AuthProvider>
       </ThemeProvider>
     </>
   )
